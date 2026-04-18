@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalinga NX | Premium Fashion Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind Config & Logic -->
+    <script src="script.js" defer></script>
+</head>
+<body class="font-sans text-gray-900 antialiased">
+
+    <!-- Floating Action Buttons -->
+    <a href="tel:+91XXXXXXXXXX" class="fixed bottom-6 left-6 z-50 bg-white text-dark w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform md:hidden border border-gray-100">
+        <i class="fa-solid fa-phone text-xl"></i>
+    </a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order" class="fixed bottom-6 right-6 z-50 bg-whatsapp text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+    </a>
+
+    <!-- Main Container -->
+    <main class="w-full bg-white overflow-hidden relative">
+        
+        <!-- Header / Navbar -->
+        <header class="flex justify-between items-center px-6 md:px-12 lg:px-20 py-10">
+            <div class="transition-transform hover:scale-105 cursor-pointer">
+                <span class="font-serif font-black tracking-[0.3em] text-xl md:text-2xl">KALINGA NX</span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-10 font-medium text-[9px] tracking-[0.3em]">
+                <a href="#" class="nav-link">HOME</a>
+                <a href="#products" class="nav-link">PRODUCTS</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#contact" class="nav-link">CONTACT</a>
+            </nav>
+
+            <!-- Buttons -->
+            <div class="hidden md:flex gap-6 items-center">
+                <a href="tel:+91XXXXXXXXXX" class="border border-dark/10 px-6 py-2 rounded-full text-[9px] font-bold tracking-widest hover:bg-dark hover:text-white transition-all">CALL</a>
+                <a href="https://wa.me/91XXXXXXXXXX" class="bg-whatsapp text-white px-8 py-3 rounded-full text-[10px] font-black tracking-widest flex items-center gap-2 hover:shadow-xl hover:-translate-y-1 transition-all">
+                    <i class="fa-brands fa-whatsapp"></i> WHATSAPP
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-2xl" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-b border-gray-100 flex-col p-6 gap-4 text-center font-bold">
+            <a href="#" class="py-2">HOME</a>
+            <a href="#products" class="py-2 border-t">PRODUCTS</a>
+            <a href="#about" class="py-2 border-t">ABOUT</a>
+            <a href="#contact" class="py-2 border-t">CONTACT</a>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center px-6 md:px-12 lg:px-20 py-12 md:py-28">
+            <!-- Left Side: Image -->
+            <div class="relative order-2 md:order-1">
+                <div class="aspect-[4/5] overflow-hidden rounded-xl shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800" alt="Premium Fashion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]">
+                </div>
+            </div>
+
+            <!-- Right Side: Text Content -->
+            <div class="text-center md:text-left order-1 md:order-2">
+                <div class="mb-6">
+                    <h1 class="font-serif text-6xl md:text-8xl leading-[0.9] mb-4 tracking-tighter">EXPLOSIVE</h1>
+                    <h2 class="text-primary font-serif italic text-2xl md:text-3xl">Big Sale</h2>
+                </div>
+                
+                <p class="text-gray-400 max-w-md mb-10 mx-auto md:mx-0 text-base leading-relaxed">
+                    Discover our latest collection where elegance meets comfort. High-end fabrics crafted for the modern individual.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-12">
+                    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20order" class="bg-whatsapp text-white px-10 py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Order on WhatsApp
+                    </a>
+                    <a href="tel:+91XXXXXXXXXX" class="border border-dark text-dark px-10 py-5 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-dark hover:text-white transition-all">
+                        Call Now
+                    </a>
+                </div>
+
+                <!-- Sale Badge -->
+                <div class="inline-flex items-center gap-3 bg-[#f8f8f8] px-4 py-2 rounded-full">
+                    <span class="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span>
+                    <p class="font-bold text-[10px] tracking-widest uppercase">Save up to 50%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section (Now below Hero) -->
+        <section id="products" class="w-full px-6 md:px-12 lg:px-20 py-20 md:py-28">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <span class="text-primary font-bold tracking-[0.3em] uppercase text-[10px]">New Arrivals</span>
+                    <h3 class="font-serif text-5xl mt-2">The Collection</h3>
+                </div>
+                <p class="text-gray-400 md:max-w-xs text-sm leading-relaxed">Explore our latest high-end apparel designed for elegance and lasting comfort.</p>
+            </div>
+
+            <!-- Products Grid (Populated via JS) -->
+            <div id="products-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 md:gap-x-12 gap-y-16">
+                <!-- JS will inject products here -->
+            </div>
+
+            <div class="mt-28 text-center">
+                <button class="border-b-2 border-dark pb-2 font-black tracking-[0.3em] text-[10px] hover:text-gray-400 hover:border-gray-400 transition-all">
+                    VIEW ALL PRODUCTS
+                </button>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#f8f8f8]">
+            <h3 class="font-serif text-4xl text-center mb-16 tracking-tight">Shop by Category</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Category Template (Repeated for others) -->
+                <div class="group cursor-pointer relative overflow-hidden rounded-sm aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-[1.5s]" alt="Men">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-6">
+                        <span class="text-white font-bold tracking-[0.4em] uppercase text-[10px] group-hover:translate-y-[-5px] transition-transform">Men</span>
+                    </div>
+                </div>
+                <!-- Add Women, Sports, New Arrivals with same pattern -->
+                <div class="group cursor-pointer relative overflow-hidden rounded-sm aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-[1.5s]" alt="Women">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-6">
+                        <span class="text-white font-bold tracking-[0.4em] uppercase text-[10px] group-hover:translate-y-[-5px] transition-transform">Women</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer relative overflow-hidden rounded-sm aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-[1.5s]" alt="Essentials">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-6">
+                        <span class="text-white font-bold tracking-[0.4em] uppercase text-[10px] group-hover:translate-y-[-5px] transition-transform">Essentials</span>
+                    </div>
+                </div>
+                <div class="group cursor-pointer relative overflow-hidden rounded-sm aspect-[3/4]">
+                    <img src="https://images.unsplash.com/photo-1529139513477-323c66b62adc?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-[1.5s]" alt="Lookbook">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-6">
+                        <span class="text-white font-bold tracking-[0.4em] uppercase text-[10px] group-hover:translate-y-[-5px] transition-transform">Lookbook</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offer Banner -->
+        <section class="w-full bg-[#000] px-6 md:px-12 lg:px-20 py-28 text-center text-white relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="font-serif text-5xl md:text-8xl mb-10 leading-none tracking-tighter">Festive Sale – <br>Up to 30% OFF</h2>
+                <p class="mb-12 text-gray-400 max-w-xl mx-auto font-light leading-relaxed">Limited time offer on our latest arrivals. Upgrade your wardrobe with timeless pieces at exclusive prices.</p>
+                <a href="https://wa.me/91XXXXXXXXXX" class="bg-white text-dark px-12 py-5 rounded-full font-black tracking-[0.2em] text-[10px] inline-block hover:scale-105 transition-transform">SHOP THE COLLECTION</a>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="w-full px-6 md:px-12 lg:px-20 py-16">
+            <div class="text-center mb-12">
+                <p class="font-serif text-3xl mb-2">500+ Happy Customers</p>
+                <div class="flex justify-center gap-1 text-yellow-400 text-[10px]">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto overflow-hidden">
+                    <div id="testimonial-track" class="testimonial-track">
+                        <!-- JS will inject testimonials here -->
+                    </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="w-full px-6 md:px-12 lg:px-20 py-28 bg-[#f8f8f8]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+                <div>
+                    <span class="text-primary font-bold tracking-[0.3em] uppercase text-[10px]">Contact</span>
+                    <h3 class="font-serif text-5xl mb-8">Visit Our Studio</h3>
+                    <p class="text-gray-500 leading-relaxed mb-8">123 Fashion Boulevard, Elite Market Area,<br>Mumbai, Maharashtra - 400001</p>
+                    <p class="text-dark font-bold">+91 XXXXXXXXXX</p>
+                </div>
+                <div class="space-y-4">
+                    <a href="https://wa.me/91XXXXXXXXXX" class="w-full bg-whatsapp text-white text-center py-6 rounded-sm font-bold tracking-widest text-[10px] block hover:opacity-90 transition-all">
+                        SEND WHATSAPP
+                    </a>
+                    <a href="tel:+91XXXXXXXXXX" class="w-full border border-dark text-dark text-center py-6 rounded-sm font-bold tracking-widest text-[10px] block hover:bg-dark hover:text-white transition-all">
+                        DIRECT CALL
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full px-6 md:px-12 lg:px-20 py-12 border-t border-gray-200 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h2 class="font-serif text-2xl font-bold tracking-tighter">KALINGA NX</h2>
+                    <p class="text-xs text-gray-400 mt-2 uppercase tracking-widest">© 2024 Kalinga NX. All Rights Reserved.</p>
+                </div>
+                <div class="flex gap-8 text-sm font-semibold text-gray-500">
+                    <a href="#" class="hover:text-primary">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary">Terms & Conditions</a>
+                    <a href="#" class="hover:text-primary">Returns</a>
+                </div>
+                <div class="flex gap-6 text-xl text-gray-400">
+                    <a href="#" class="hover:text-dark transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-dark transition"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Product Details Modal -->
+    <div id="product-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 md:p-8 modal-overlay">
+        <div class="bg-white w-full max-w-6xl max-h-[90vh] rounded-[40px] overflow-hidden shadow-2xl flex flex-col md:flex-row relative">
+            <!-- Close Button -->
+            <button onclick="closeProductModal()" class="absolute top-6 right-6 z-[110] bg-dark text-white w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition shadow-lg">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <!-- Left: Slider Section -->
+            <div class="w-full md:w-1/2 bg-gray-50 relative overflow-hidden h-[400px] md:h-auto">
+                <div class="slider-track h-full" id="slider-track">
+                    <!-- Images injected by JS -->
+                </div>
+                <!-- Manual Slider Controls -->
+                <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-4 z-[105]">
+                    <button onclick="moveSlider(-1)" class="bg-white/90 w-12 h-12 rounded-full flex items-center justify-center shadow-md hover:bg-white transition-all">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button onclick="moveSlider(1)" class="bg-white/90 w-12 h-12 rounded-full flex items-center justify-center shadow-md hover:bg-white transition-all">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Detailed Content -->
+            <div class="w-full md:w-1/2 p-8 md:p-12 overflow-y-auto no-scrollbar bg-white">
+                <div class="mb-4 flex items-center justify-between">
+                    <span class="text-xs font-black tracking-[0.2em] text-primary uppercase bg-primary/10 px-4 py-1.5 rounded-full">Elite Collection</span>
+                    <div class="flex items-center gap-1.5 text-yellow-400">
+                        <i class="fa-solid fa-star"></i>
+                        <span id="modal-rating" class="text-dark font-black text-sm"></span>
+                    </div>
+                </div>
+                
+                <h2 id="modal-name" class="font-serif text-4xl md:text-5xl mb-4 text-dark"></h2>
+                <p id="modal-price" class="text-3xl font-bold text-primary mb-8"></p>
+                
+                <!-- Sold Social Proof -->
+                <div class="bg-gray-50 border border-gray-100 p-5 rounded-3xl mb-10 flex items-center gap-5">
+                    <div class="flex -space-x-3">
+                        <img class="w-10 h-10 rounded-full border-4 border-white" src="https://i.pravatar.cc/100?u=a1">
+                        <img class="w-10 h-10 rounded-full border-4 border-white" src="https://i.pravatar.cc/100?u=a2">
+                        <img class="w-10 h-10 rounded-full border-4 border-white" src="https://i.pravatar.cc/100?u=a3">
+                    </div>
+                    <p id="modal-sold" class="text-sm font-bold text-gray-700"></p>
+                </div>
+
+                <div class="space-y-8 mb-12">
+                    <div>
+                        <h4 class="font-black text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">The Look</h4>
+                        <p id="modal-short-desc" class="text-lg text-dark font-medium leading-relaxed"></p>
+                    </div>
+                    <div>
+                        <h4 class="font-black text-xs uppercase tracking-[0.2em] text-gray-400 mb-3">Product Story</h4>
+                        <p id="modal-full-desc" class="text-gray-500 text-base leading-relaxed"></p>
+                    </div>
+                    
+                    <div id="modal-sizes-container">
+                        <h4 class="font-black text-xs uppercase tracking-[0.2em] text-gray-400 mb-4">Select Size</h4>
+                        <div id="modal-sizes" class="flex flex-wrap gap-3"></div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-black text-xs uppercase tracking-[0.2em] text-gray-400 mb-4">Available Tones</h4>
+                        <div id="modal-colors" class="flex gap-4"></div>
+                    </div>
+                </div>
+
+                <a id="modal-wa-btn" href="#" class="w-full bg-whatsapp text-white py-6 rounded-[2rem] font-black flex items-center justify-center gap-4 hover:scale-[1.02] transition-all shadow-2xl text-xl">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i> ORDER ON WHATSAPP
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
